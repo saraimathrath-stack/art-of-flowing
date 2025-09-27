@@ -1,0 +1,191 @@
+/* 🌊 Zen Menu Animations - Simple & Peaceful */
+
+/* 🧘 Basic Link Transitions */
+.sidebar-link {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 🌸 Gentle Hover Effect */
+.sidebar-link:hover {
+  transform: translateX(2px);
+  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ✨ Active State - Soft Glow */
+.sidebar-link.active {
+  background: rgba(135, 232, 177, 0.15);
+  transform: translateX(1px);
+  position: relative;
+}
+
+.sidebar-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, #87e8b1, #90cdf4);
+  border-radius: 0 1px 1px 0;
+  opacity: 0.8;
+}
+
+/* 🪷 Icon Animations - Subtle */
+.sidebar-link .sidebar-icon {
+  transition: all 0.3s ease;
+}
+
+.sidebar-link:hover .sidebar-icon {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* 🌊 Text Animations - Gentle */
+.sidebar-link span:not(.sidebar-icon) {
+  transition: all 0.3s ease;
+}
+
+.sidebar-link:hover span:not(.sidebar-icon) {
+  transform: translateX(1px);
+  opacity: 0.95;
+}
+
+/* 🧘 Collapse Button - Zen Style */
+.sidebar-collapse-toggle-top {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-collapse-toggle-top:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* 🌸 Collapsed State - Minimal */
+.sidebar.collapsed .sidebar-link {
+  transition: all 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-link:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.sidebar.collapsed .sidebar-link.active {
+  background: rgba(135, 232, 177, 0.2);
+  transform: scale(1.01);
+}
+
+.sidebar.collapsed .sidebar-link.active::after {
+  display: none;
+}
+
+/* 🪷 Collapsed Icons - Gentle */
+.sidebar.collapsed .sidebar-link .sidebar-icon {
+  transition: all 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-link:hover .sidebar-icon {
+  transform: scale(1.08);
+  opacity: 0.9;
+}
+
+/* 🌊 Logo Animation - Floating */
+.sidebar-logo {
+  transition: all 0.6s ease;
+}
+
+.sidebar-logo:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+/* 🧘 Mobile States - Simplified */
+@media (max-width: 768px) {
+  .sidebar-link:hover {
+    transform: none;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .sidebar-link.active {
+    transform: none;
+  }
+}
+
+/* 🌸 Focus States - Accessible */
+.sidebar-link:focus-visible {
+  outline: 2px solid rgba(135, 232, 177, 0.6);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* 🪷 Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-link,
+  .sidebar-link .sidebar-icon,
+  .sidebar-link span:not(.sidebar-icon),
+  .sidebar-collapse-toggle-top,
+  .sidebar-logo {
+    transition: none;
+  }
+  
+  .sidebar-link:hover,
+  .sidebar-link.active {
+    transform: none;
+  }
+}
+
+/* 🌊 Smooth Entrance Animation */
+.sidebar {
+  animation: zenFadeIn 0.8s ease-out;
+}
+
+@keyframes zenFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 🧘 Link Staggered Entrance */
+.sidebar-link {
+  animation: zenSlideIn 0.6s ease-out both;
+}
+
+.sidebar-link:nth-child(1) { animation-delay: 0.1s; }
+.sidebar-link:nth-child(2) { animation-delay: 0.15s; }
+.sidebar-link:nth-child(3) { animation-delay: 0.2s; }
+.sidebar-link:nth-child(4) { animation-delay: 0.25s; }
+.sidebar-link:nth-child(5) { animation-delay: 0.3s; }
+.sidebar-link:nth-child(6) { animation-delay: 0.35s; }
+.sidebar-link:nth-child(7) { animation-delay: 0.4s; }
+.sidebar-link:nth-child(8) { animation-delay: 0.45s; }
+
+@keyframes zenSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 0.8;
+    transform: translateX(0);
+  }
+}
+
+/* 🌸 Peaceful Pulse for Active State */
+.sidebar-link.active {
+  animation: zenPulse 3s ease-in-out infinite;
+}
+
+@keyframes zenPulse {
+  0%, 100% {
+    background: rgba(135, 232, 177, 0.15);
+  }
+  50% {
+    background: rgba(135, 232, 177, 0.2);
+  }
+}

@@ -1,0 +1,271 @@
+/* Home Page Layout */
+
+.home-page {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.home-header {
+  margin-bottom: 3rem;
+}
+
+.home-title {
+  margin-bottom: 0.5rem;
+}
+
+.home-subtitle {
+  margin-bottom: 1rem;
+}
+
+.home-motto {
+  margin-bottom: 2rem;
+}
+
+/* Cards Section */
+.cards-section {
+  margin-bottom: 3rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-page {
+    padding: 2rem 1rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1400px) {
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Centered Logo Section */
+.logo-section-centered {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.logo-container-centered {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: visible;
+  transition: all 0.3s ease;
+  min-width: 150px;
+  min-height: 150px;
+}
+
+.centered-logo {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.logo-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.logo-container-centered:hover .logo-hover-overlay {
+  opacity: 1;
+}
+
+.logo-hover-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.logo-upload-btn,
+.logo-remove-btn {
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #333;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.logo-upload-btn:hover,
+.logo-remove-btn:hover {
+  background: rgba(255,255,255,1);
+  transform: scale(1.05);
+}
+
+/* Priority Projects Card - Matching Projects Page Styling */
+.priority-projects-card {
+  min-height: 320px;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.project-title-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: #E8E8E8;
+}
+
+.project-completed {
+  font-size: 1.2rem;
+  color: #87e8b1;
+  margin-left: 0.7rem;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.6rem;
+}
+
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #87e8b1, #90cdf4);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-percent {
+  font-size: 1rem;
+  color: #5e7c7c;
+  font-family: 'Inter', sans-serif;
+  min-width: 36px;
+  text-align: right;
+}
+
+
+.no-projects {
+  text-align: center;
+  padding: 1rem;
+  color: #6c8999;
+  font-style: italic;
+}
+
+/* Motivation Card */
+.motivation-card {
+  min-height: 200px;
+  text-align: center;
+}
+
+.motivation-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: inherit;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+}
+
+.motivation-author {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #5e7c7c;
+  font-weight: 500;
+}
+
+/* Centered Greeting */
+.home-greeting {
+  margin-bottom: 2rem;
+}
+
+.greeting-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+/* Clickable Card */
+.clickable-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clickable-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.clickable-card:hover .glass-card-title {
+  color: #87e8b1;
+}
+
+/* Footer */
+.home-footer {
+  text-align: center;
+  margin-top: 3rem;
+}

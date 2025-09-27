@@ -1,0 +1,197 @@
+.projects-main {
+  padding: 3rem 1rem;
+}
+.projects-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.projects-header > div {
+  flex: 1;
+}
+.projects-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin: 0;
+}
+.projects-prompt {
+  font-size: 1.1rem;
+  color: #80aeca;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+}
+.add-project-btn {
+  background: #b2ebf2;
+  color: #154360;
+  border: none;
+  border-radius: 12px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.add-project-btn:hover {
+  background: #adebeb;
+}
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2.2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.empty-state {
+  color: #8ebdd8;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.completed-projects {
+  margin-top: 2.5rem;
+}
+.progress-summary {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.progress-summary span {
+  display: block;
+  font-weight: 600;
+  color: #35698a;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #87e8b1, #90cdf4);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.projects-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+}
+
+.filter-btn {
+  background: rgba(255,255,255,0.2);
+  color: #6c8999;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background: rgba(255,255,255,0.3);
+  color: #35698a;
+}
+
+.filter-btn.active {
+  background: #b2ebf2;
+  color: #154360;
+  font-weight: 600;
+}
+
+.completed-projects h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  color: #7b8fa1;
+}
+
+/* Ocean theme adjustments */
+.theme-ocean-morning .projects-main,
+.theme-ocean-day .projects-main,
+.theme-ocean-evening .projects-main {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.theme-ocean-morning .projects-filters,
+.theme-ocean-day .projects-filters,
+.theme-ocean-evening .projects-filters {
+  background: var(--card-color);
+  border: 1px solid rgba(46,139,192,0.2);
+  box-shadow: 0 2px 8px rgba(26,60,64,0.1);
+}
+
+.theme-ocean-morning .filter-btn,
+.theme-ocean-day .filter-btn,
+.theme-ocean-evening .filter-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(46,139,192,0.2);
+  color: var(--text-color);
+}
+
+.theme-ocean-morning .filter-btn:hover,
+.theme-ocean-day .filter-btn:hover,
+.theme-ocean-evening .filter-btn:hover {
+  background: rgba(46,139,192,0.1);
+  border-color: rgba(46,139,192,0.4);
+}
+
+.theme-ocean-morning .filter-btn.active,
+.theme-ocean-day .filter-btn.active,
+.theme-ocean-evening .filter-btn.active {
+  background: rgba(46,139,192,0.2);
+  border-color: rgba(46,139,192,0.6);
+  color: #2E8BC0;
+}
+
+.theme-ocean-night .projects-main {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.theme-ocean-night .projects-filters {
+  background: var(--card-color);
+  border: 1px solid rgba(77,208,225,0.2);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.theme-ocean-night .filter-btn {
+  background: rgba(31,58,74,0.3);
+  border: 1px solid rgba(77,208,225,0.2);
+  color: var(--text-color);
+}
+
+.theme-ocean-night .filter-btn:hover {
+  background: rgba(77,208,225,0.1);
+  border-color: rgba(77,208,225,0.4);
+}
+
+.theme-ocean-night .filter-btn.active {
+  background: rgba(77,208,225,0.2);
+  border-color: rgba(77,208,225,0.6);
+  color: #4DD0E1;
+}

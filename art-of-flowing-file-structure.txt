@@ -1,0 +1,59 @@
+src/
+  components/
+    Layout/
+      Sidebar.tsx              # Minimal, icon+text navigation (Home, Finance, Projects, etc.)
+      Topbar.tsx               # Optional top navigation, motto
+      AmbientBackground.tsx    # Dynamic day/night gradient, waves, stars, etc.
+    Cards/
+      SnapshotCard.tsx         # Home page: earnings, projects, intention cards (glassmorphic)
+      FinancePotCard.tsx       # Finance page: Babylon-style pots
+      ProjectCard.tsx          # Projects list entries
+    Journal/
+      ReflectionForm.tsx       # Prompts for Win, Lesson, Intention
+      StreakTracker.tsx        # Dots or icons for streaks
+      MoodRating.tsx           # Optional mood icons
+    Manifesto/
+      ManifestoDisplay.tsx     # Elegantly styled manifesto
+      ManifestoEditor.tsx      # Edit mode for manifesto
+    Wisdom/
+      WisdomList.tsx           # List/search/filter notes
+      WisdomEditor.tsx         # Add/edit notes
+      TagFilter.tsx            # Tag cloud/filter UI
+    Tips/
+      DailyTipPanel.tsx        # Rotating inspirational quotes/affirmations
+
+  pages/
+    Home.tsx                   # Landing page
+    Finance.tsx
+    Projects.tsx
+    Reflection.tsx
+    Manifesto.tsx
+    Wisdom.tsx
+
+  context/
+    ThemeContext.tsx           # Circadian theming logic (morning, day, evening, night)
+    UserContext.tsx            # User name, preferences, etc.
+    FinanceContext.tsx         # Income, pots, allocations
+    ProjectsContext.tsx        # List, progress, notes
+    JournalContext.tsx         # Reflection entries, streak
+    WisdomContext.tsx          # Notes, tags
+
+  utils/
+    localStorage.ts            # Helper for state/data persistence
+    themeUtils.ts              # Time-based theme calculation
+    financeUtils.ts            # Babylon allocation logic
+
+  styles/
+    theme.css                  # CSS variables for colors, gradients
+    glassmorphism.css          # Frosted glass effects
+    fonts.css                  # Playfair Display & Inter imports
+
+  App.tsx                      # Main app shell, routes, global providers
+  index.tsx                    # Entry point
+
+public/
+  index.html                   # Root HTML, Google Fonts link
+  manifest.json                # PWA settings
+  icons/                       # App icons (wave, sunrise, etc.)
+
+README.md                      # Project overview, setup instructions

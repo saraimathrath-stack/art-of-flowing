@@ -1,0 +1,243 @@
+.glass-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.3);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+  padding: 2rem;
+  margin: 1rem;
+  min-width: 220px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.glass-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #E8E8E8;
+}
+.glass-card-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+}
+.glass-card-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #5e7c7c;
+  font-style: italic;
+}
+.glass-card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  opacity: 0.7;
+}
+
+/* Enhanced SnapshotCard Styles */
+.snapshot-card {
+  position: relative;
+  min-height: 280px;
+}
+
+/* Image section */
+.card-image-section {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.card-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.remove-image-btn:hover {
+  background: rgba(255,255,255,1);
+  transform: scale(1.1);
+}
+
+/* Upload section */
+.card-upload-section {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.upload-btn {
+  background: rgba(255,255,255,0.2);
+  border: 1px dashed rgba(255,255,255,0.4);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.upload-btn:hover {
+  background: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.6);
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.upload-input {
+  padding: 0.5rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.1);
+  color: inherit;
+  font-size: 0.9rem;
+}
+
+.upload-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.upload-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.upload-submit,
+.upload-cancel {
+  padding: 0.3rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.upload-submit {
+  background: rgba(76,175,80,0.8);
+  color: white;
+}
+
+.upload-submit:hover {
+  background: rgba(76,175,80,1);
+}
+
+.upload-cancel {
+  background: rgba(244,67,54,0.8);
+  color: white;
+}
+
+.upload-cancel:hover {
+  background: rgba(244,67,54,1);
+}
+
+/* File upload */
+.file-upload-label {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.file-upload-label:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.file-upload-input {
+  display: none;
+}
+
+/* Progress section */
+.card-progress-section {
+  margin: 1rem 0;
+}
+
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #87e8b1, #90cdf4);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.progress-percent {
+  font-size: 0.9rem;
+  color: #5e7c7c;
+  font-family: 'Inter', sans-serif;
+  min-width: 36px;
+  text-align: right;
+}
+
+.progress-slider {
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.progress-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #87e8b1;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.progress-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #87e8b1;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,356 @@
+.wisdom-main {
+  padding: 3rem 1rem;
+}
+
+/* Ocean theme adjustments */
+.theme-ocean-morning .wisdom-main,
+.theme-ocean-day .wisdom-main,
+.theme-ocean-evening .wisdom-main {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.theme-ocean-morning .wisdom-header h1,
+.theme-ocean-day .wisdom-header h1,
+.theme-ocean-evening .wisdom-header h1 {
+  color: var(--text-color);
+}
+
+.theme-ocean-morning .wisdom-subtitle,
+.theme-ocean-day .wisdom-subtitle,
+.theme-ocean-evening .wisdom-subtitle {
+  color: var(--secondary-color);
+}
+
+.theme-ocean-morning .new-wisdom-btn,
+.theme-ocean-day .new-wisdom-btn,
+.theme-ocean-evening .new-wisdom-btn {
+  background: var(--accent-color);
+  color: white;
+  border: 1px solid var(--accent-color);
+}
+
+.theme-ocean-morning .new-wisdom-btn:hover,
+.theme-ocean-day .new-wisdom-btn:hover,
+.theme-ocean-evening .new-wisdom-btn:hover {
+  background: rgba(46,139,192,0.8);
+  transform: translateY(-2px);
+}
+
+.theme-ocean-night .wisdom-main {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.theme-ocean-night .wisdom-header h1 {
+  color: var(--text-color);
+}
+
+.theme-ocean-night .wisdom-subtitle {
+  color: var(--secondary-color);
+}
+
+.theme-ocean-night .new-wisdom-btn {
+  background: var(--accent-color);
+  color: #0B1C2C;
+  border: 1px solid var(--accent-color);
+}
+
+.theme-ocean-night .new-wisdom-btn:hover {
+  background: rgba(77,208,225,0.8);
+  transform: translateY(-2px);
+}
+
+.wisdom-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.wisdom-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #35698a;
+}
+
+.wisdom-subtitle {
+  font-size: 1.2rem;
+  color: #6c8999;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.new-wisdom-btn {
+  background: #b2ebf2;
+  color: #154360;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.2s;
+}
+
+.new-wisdom-btn:hover {
+  background: #adebeb;
+  transform: translateY(-2px);
+}
+
+.wisdom-filters {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #d3d3c2;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.3);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #35698a;
+  box-shadow: 0 0 0 2px rgba(53,105,138,0.2);
+}
+
+.category-filter {
+  min-width: 200px;
+}
+
+.category-select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #d3d3c2;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.3);
+}
+
+.wisdom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30,60,80,0.3);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.wisdom-modal-content {
+  background: #f8f6ed;
+  border-radius: 24px;
+  padding: 2.5rem;
+  max-width: 700px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+.wisdom-modal-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #35698a;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #35698a;
+  font-size: 1rem;
+}
+
+.form-input, .form-textarea, .form-select {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #d3d3c2;
+  font-size: 1rem;
+  background: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.save-btn, .cancel-btn {
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-btn {
+  background: #b2ebf2;
+  color: #154360;
+  border: none;
+}
+
+.save-btn:hover:not(:disabled) {
+  background: #adebeb;
+}
+
+.save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background: #f0f0f0;
+  color: #666;
+  border: none;
+}
+
+.cancel-btn:hover {
+  background: #e0e0e0;
+}
+
+.wisdom-entries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #8ebdd8;
+  grid-column: 1 / -1;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.empty-state h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #6c8999;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  color: #8ebdd8;
+}
+
+.wisdom-entry {
+  background: rgba(255,255,255,0.3);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.2s;
+}
+
+.wisdom-entry:hover {
+  transform: translateY(-2px);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.entry-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.entry-category {
+  background: #b2ebf2;
+  color: #154360;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.entry-date {
+  color: #6c8999;
+  font-size: 0.9rem;
+}
+
+.delete-entry-btn {
+  background: none;
+  border: none;
+  color: #c09090;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.delete-entry-btn:hover {
+  background: #f8dada;
+}
+
+.entry-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #35698a;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.entry-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #3c2a21;
+  margin-bottom: 1rem;
+}
+
+.entry-source {
+  font-style: italic;
+  color: #6c8999;
+  font-size: 0.95rem;
+  text-align: right;
+}

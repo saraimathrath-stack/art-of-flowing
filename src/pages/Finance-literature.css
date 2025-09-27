@@ -1,0 +1,159 @@
+/* Literature Toggle Button */
+.literature-toggle-btn {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.literature-toggle-btn:hover {
+  background: var(--accent-color);
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Expanded Literature Section */
+.literature-expanded {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.literature-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.literature-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+}
+
+.literature-header h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+}
+
+.literature-header p {
+  color: var(--secondary-color, #6c7b7d);
+  font-style: italic;
+  margin: 0;
+}
+
+.literature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.book-card {
+  background: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.book-card:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.book-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.book-number {
+  background: var(--accent-color);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.3rem 0;
+  color: var(--text-color);
+  line-height: 1.3;
+}
+
+.book-title h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.3rem 0;
+  color: var(--text-color);
+  line-height: 1.3;
+}
+
+.book-author {
+  color: var(--secondary-color, #6c7b7d);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.book-content {
+  margin-top: 1rem;
+}
+
+.book-lesson {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.book-wisdom {
+  color: var(--secondary-color, #6c7b7d);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-style: italic;
+  padding: 0.8rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-color);
+}

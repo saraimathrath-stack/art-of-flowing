@@ -1,0 +1,218 @@
+/* Background Patterns and Visual Depth */
+
+.background-patterns {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.flowing-patterns,
+.geometric-patterns {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: gentle-drift 60s ease-in-out infinite;
+}
+
+.geometric-patterns {
+  animation: gentle-drift 80s ease-in-out infinite reverse;
+}
+
+@keyframes gentle-drift {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(-10px) translateY(-5px);
+  }
+  50% {
+    transform: translateX(5px) translateY(-10px);
+  }
+  75% {
+    transform: translateX(-5px) translateY(5px);
+  }
+}
+
+/* Flowing wave animations */
+.flowing-wave-1 {
+  animation: wave-flow-1 30s ease-in-out infinite;
+}
+
+.flowing-wave-2 {
+  animation: wave-flow-2 35s ease-in-out infinite;
+}
+
+.flowing-wave-3 {
+  animation: wave-flow-3 40s ease-in-out infinite;
+}
+
+@keyframes wave-flow-1 {
+  0%, 100% {
+    d: path("M0,200 Q300,100 600,200 T1200,200 L1200,0 L0,0 Z");
+  }
+  50% {
+    d: path("M0,180 Q300,120 600,180 T1200,180 L1200,0 L0,0 Z");
+  }
+}
+
+@keyframes wave-flow-2 {
+  0%, 100% {
+    d: path("M0,400 Q400,300 800,400 T1600,400 L1600,200 L0,200 Z");
+  }
+  50% {
+    d: path("M0,420 Q400,280 800,420 T1600,420 L1600,200 L0,200 Z");
+  }
+}
+
+@keyframes wave-flow-3 {
+  0%, 100% {
+    d: path("M0,600 Q500,500 1000,600 T2000,600 L2000,400 L0,400 Z");
+  }
+  50% {
+    d: path("M0,580 Q500,520 1000,580 T2000,580 L2000,400 L0,400 Z");
+  }
+}
+
+/* Organic circles breathing */
+.organic-circle-1 {
+  animation: breathe 25s ease-in-out infinite;
+}
+
+.organic-circle-2 {
+  animation: breathe 30s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+.organic-circle-3 {
+  animation: breathe 35s ease-in-out infinite;
+  animation-delay: -10s;
+}
+
+.organic-circle-4 {
+  animation: breathe 28s ease-in-out infinite;
+  animation-delay: -15s;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    r: var(--original-radius);
+    opacity: 0.3;
+  }
+  50% {
+    r: calc(var(--original-radius) * 1.2);
+    opacity: 0.5;
+  }
+}
+
+/* Dots pattern animation */
+.dots-pattern {
+  animation: dots-shimmer 20s linear infinite;
+}
+
+@keyframes dots-shimmer {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+/* Floating particles */
+.floating-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: float-particle linear infinite;
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(100vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100px) translateX(50px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Theme-specific pattern adjustments */
+.theme-night .flowing-patterns,
+.theme-night .geometric-patterns {
+  filter: blur(1px);
+}
+
+.theme-night .particle {
+  box-shadow: 0 0 6px currentColor;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .flowing-patterns,
+  .geometric-patterns {
+    animation-duration: 40s;
+  }
+  
+  .particle {
+    width: 2px;
+    height: 2px;
+  }
+  
+  .organic-circle-1,
+  .organic-circle-2,
+  .organic-circle-3,
+  .organic-circle-4 {
+    animation-duration: 20s;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .flowing-patterns,
+  .geometric-patterns,
+  .flowing-wave-1,
+  .flowing-wave-2,
+  .flowing-wave-3,
+  .organic-circle-1,
+  .organic-circle-2,
+  .organic-circle-3,
+  .organic-circle-4,
+  .dots-pattern,
+  .particle {
+    animation: none;
+  }
+  
+  .particle {
+    opacity: 0.1;
+  }
+}
+
+

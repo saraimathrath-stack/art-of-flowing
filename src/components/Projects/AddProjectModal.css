@@ -1,0 +1,75 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30,60,80,0.20);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.modal-content {
+  background: #f8f6ed;
+  border-radius: 22px;
+  box-shadow: 0 2px 20px rgba(0,0,20,0.08);
+  padding: 2.5rem 2rem;
+  min-width: 320px;
+  max-width: 400px;
+}
+.modal-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: #35698a;
+}
+.modal-content label {
+  font-size: 1rem;
+  color: #7b8fa1;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.modal-content input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  border-radius: 8px;
+  border: 1px solid #d3d3c2;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.modal-add-btn {
+  background: #b2ebf2;
+  color: #154360;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1.3rem;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.modal-add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.modal-add-btn:hover:not(:disabled) {
+  background: #adebeb;
+}
+.modal-cancel-btn {
+  background: none;
+  color: #35698a;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0.7rem 1.3rem;
+}
+.modal-cancel-btn:hover {
+  background: #dae5e8;
+}

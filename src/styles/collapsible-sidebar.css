@@ -1,0 +1,199 @@
+/* Collapsible Sidebar Styles */
+
+/* Sidebar collapse section at top */
+.sidebar-collapse-section-top {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-collapse-toggle-top {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  width: 36px;
+  height: 32px;
+  min-width: 36px;
+  min-height: 32px;
+  max-width: 36px;
+  max-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.sidebar-collapse-toggle-top:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.sidebar.collapsed .sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.sidebar.collapsed .sidebar-link.active {
+  background: rgba(135, 232, 177, 0.2);
+  border-color: rgba(135, 232, 177, 0.4);
+  transform: none;
+  width: 36px;
+  height: 32px;
+  min-width: 36px;
+  min-height: 32px;
+  max-width: 36px;
+  max-height: 32px;
+  margin: 4px auto;
+}
+
+/* Collapsed sidebar - adjust collapse button */
+.sidebar.collapsed .sidebar-collapse-section-top {
+  padding: 1rem 0.5rem;
+}
+
+.sidebar.collapsed .sidebar-collapse-toggle-top {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  max-width: 28px;
+  max-height: 28px;
+  font-size: 12px;
+}
+
+/* Sidebar flexbox layout */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Collapsed sidebar */
+.sidebar.collapsed {
+  width: 125px !important;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-logo {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-link {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  width: 36px;
+  height: 32px;
+  min-width: 36px;
+  min-height: 32px;
+  max-width: 36px;
+  max-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  margin: 4px auto;
+}
+
+.sidebar.collapsed .sidebar-link span:not(.sidebar-icon) {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-icon {
+  margin: 0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 19px;
+  height: 19px;
+  overflow: hidden;
+}
+
+.sidebar.collapsed .sidebar-icon svg {
+  width: 19px !important;
+  height: 19px !important;
+  max-width: 19px !important;
+  max-height: 19px !important;
+}
+
+/* Main content adjustment */
+.sidebar.collapsed ~ .main-content {
+  margin-left: 125px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar-collapse-toggle {
+    display: none;
+  }
+  
+  .sidebar.collapsed {
+    width: 200px !important;
+  }
+  
+  .sidebar.collapsed .sidebar-link {
+    justify-content: flex-start;
+    padding: 1rem 1.5rem;
+  }
+  
+  .sidebar.collapsed .sidebar-link span:not(.sidebar-icon) {
+    display: inline;
+  }
+  
+  .sidebar.collapsed .sidebar-icon {
+    margin-right: 1rem;
+  }
+}
+
+/* Smooth transitions */
+.sidebar,
+.sidebar .sidebar-link,
+.sidebar .sidebar-icon {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Tooltip for collapsed sidebar links */
+.sidebar.collapsed .sidebar-link {
+  position: relative;
+}
+
+.sidebar.collapsed .sidebar-link::after {
+  content: attr(title);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 1000;
+  margin-left: 0.5rem;
+}
+
+.sidebar.collapsed .sidebar-link:hover::after {
+  opacity: 1;
+  visibility: visible;
+}

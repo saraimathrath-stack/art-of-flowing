@@ -1,0 +1,292 @@
+.settings-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.settings-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.settings-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+}
+
+.settings-header p {
+  font-size: 1.1rem;
+  color: var(--secondary-color, #6c7b7d);
+  margin: 0;
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.settings-section {
+  background: rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.settings-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+}
+
+.settings-section p {
+  color: var(--secondary-color, #6c7b7d);
+  margin: 0 0 2rem 0;
+  font-size: 1rem;
+}
+
+.theme-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.theme-option {
+  background: rgba(255,255,255,0.05);
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.theme-option:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(120,180,210,0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.theme-option.active {
+  background: rgba(120,180,210,0.1);
+  border-color: rgba(120,180,210,0.4);
+  box-shadow: 0 4px 20px rgba(120,180,210,0.2);
+}
+
+.theme-option-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.theme-emoji {
+  font-size: 2rem;
+}
+
+.theme-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.theme-description {
+  color: var(--secondary-color, #6c7b7d);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.active-indicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(120,180,210,0.2);
+  color: #4a90a4;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.theme-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.info-label {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.info-value {
+  color: var(--secondary-color, #6c7b7d);
+  font-weight: 400;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* Day/Night Toggle Styles */
+.day-night-toggle {
+  margin-top: 1rem;
+}
+
+.toggle-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid rgba(120,180,210,0.3);
+  background: rgba(255,255,255,0.05);
+  color: var(--text-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.toggle-btn:hover {
+  background: rgba(120,180,210,0.1);
+  border-color: rgba(120,180,210,0.5);
+  transform: translateY(-2px);
+}
+
+.toggle-btn.active {
+  background: rgba(120,180,210,0.2);
+  border-color: rgba(120,180,210,0.6);
+  box-shadow: 0 4px 12px rgba(120,180,210,0.3);
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+}
+
+.toggle-label {
+  font-weight: 600;
+}
+
+.current-mode {
+  text-align: center;
+  padding: 0.8rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.current-mode strong {
+  color: var(--accent-color);
+}
+
+/* Currency Selection Styles */
+.currency-selection {
+  margin-top: 1rem;
+}
+
+.currency-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.currency-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.5rem;
+  border: 2px solid rgba(120,180,210,0.3);
+  background: rgba(255,255,255,0.05);
+  color: var(--text-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  flex: 1;
+}
+
+.currency-btn:hover {
+  background: rgba(120,180,210,0.1);
+  border-color: rgba(120,180,210,0.5);
+  transform: translateY(-2px);
+}
+
+.currency-btn.active {
+  background: rgba(120,180,210,0.2);
+  border-color: rgba(120,180,210,0.6);
+  box-shadow: 0 4px 12px rgba(120,180,210,0.3);
+}
+
+.currency-symbol {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.currency-name {
+  font-weight: 600;
+}
+
+.current-currency {
+  text-align: center;
+  padding: 0.8rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.current-currency strong {
+  color: var(--accent-color);
+}
+
+/* Night theme adjustments */
+.theme-night .settings-section {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.theme-night .theme-option {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.08);
+}
+
+.theme-night .theme-option:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(120,180,210,0.4);
+}
+
+.theme-night .theme-option.active {
+  background: rgba(120,180,210,0.15);
+  border-color: rgba(120,180,210,0.5);
+}
+
+.theme-night .info-item {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.08);
+}

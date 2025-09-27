@@ -1,0 +1,93 @@
+{
+  "short_name": "Art of Flowing",
+  "name": "The Art of Flowing - Personal Dashboard",
+  "description": "A serene, circadian-themed personal dashboard for mindful living and productivity",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "theme_color": "#667eea",
+  "background_color": "#f8f6f1",
+  "orientation": "portrait-primary",
+  "categories": ["lifestyle", "productivity", "wellness", "utilities"],
+  "lang": "en",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+artofflowing",
+      "url": "/?action=%s"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Finance",
+      "short_name": "Finance",
+      "description": "View your financial dashboard",
+      "url": "/finance",
+      "icons": [{ "src": "favicon.ico", "sizes": "96x96" }]
+    },
+    {
+      "name": "Projects",
+      "short_name": "Projects",
+      "description": "Manage your projects",
+      "url": "/projects",
+      "icons": [{ "src": "favicon.ico", "sizes": "96x96" }]
+    },
+    {
+      "name": "Reflection",
+      "short_name": "Reflection",
+      "description": "Daily reflection and mindfulness",
+      "url": "/reflection",
+      "icons": [{ "src": "favicon.ico", "sizes": "96x96" }]
+    },
+    {
+      "name": "Wisdom",
+      "short_name": "Wisdom",
+      "description": "Access your wisdom collection",
+      "url": "/wisdom",
+      "icons": [{ "src": "favicon.ico", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "related_applications": [],
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7"
+}
+

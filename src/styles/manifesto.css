@@ -1,0 +1,45 @@
+.manifesto-container {
+  background: #f8f6ed;
+  border-radius: 28px;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 2px 20px rgba(0,0,20,0.03);
+  border: 1px solid #eae6d6;
+  position: relative;
+}
+.manifesto-title {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+.manifesto-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  color: #3c2a21;
+  text-align: center;
+  white-space: pre-line;
+}
+.manifesto-placeholder {
+  color: #a5a5a5;
+  font-style: italic;
+}
+.manifesto-edit-btn {
+  margin-top: 2rem;
+  background: #dae5e8;
+  color: #35698a;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: background 0.2s;
+}
+.manifesto-edit-btn:hover {
+  background: #c0d7de;
+}
